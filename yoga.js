@@ -61,31 +61,66 @@ gsap.defaults({
 gsap.fromTo(
   ".about-grid",
   { opacity: 0, y: 100 },
-  { opacity: 1, y: 0, scrollTrigger: ".about-grid" }
+  {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: ".about-grid",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 
 // Yoga video
 gsap.fromTo(
   ".yoga-vid",
   { opacity: 0, scale: 0.5 },
-  { opacity: 1, scale: 1, scrollTrigger: ".yoga-vid" }
+  {
+    opacity: 1,
+    scale: 1,
+    scrollTrigger: {
+      trigger: ".yoga-vid",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 
 // Our studio
 gsap.fromTo(
   ".location",
   { opacity: 0, x: -300 },
-  { opacity: 1, x: 0, scrollTrigger: ".studio" }
+  {
+    opacity: 1,
+    x: 0,
+    scrollTrigger: {
+      trigger: ".studio",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 gsap.fromTo(
   ".paragraph",
   { opacity: 0, x: 300 },
-  { opacity: 1, x: 0, scrollTrigger: ".studio" }
+  {
+    opacity: 1,
+    x: 0,
+    scrollTrigger: {
+      trigger: ".studio",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 gsap.fromTo(
   ".panel-2",
   { opacity: 0, y: 100 },
-  { opacity: 1, y: 0, scrollTrigger: ".studio" }
+  {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: ".studio",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 
 // Testimonial
@@ -95,7 +130,10 @@ gsap.fromTo(
   {
     opacity: 1,
     y: 0,
-    scrollTrigger: "#testimonial",
+    scrollTrigger: {
+      trigger: "#testimonial",
+      toggleActions: "restart none restart none",
+    },
   }
 );
 
@@ -107,7 +145,10 @@ gsap.fromTo(
     scale: 1,
     duration: 1,
     ease: "circ.out",
-    scrollTrigger: ".test-left",
+    scrollTrigger: {
+      trigger: ".test-left",
+      toggleActions: "restart none restart none",
+    },
   }
 );
 gsap.fromTo(
@@ -118,7 +159,10 @@ gsap.fromTo(
     x: 0,
     duration: 1,
     ease: "circ.out",
-    scrollTrigger: ".test-right",
+    scrollTrigger: {
+      trigger: ".test-right",
+      toggleActions: "restart none restart none",
+    },
   }
 );
 
@@ -126,7 +170,14 @@ gsap.fromTo(
 gsap.fromTo(
   ".partners-list",
   { opacity: 0, x: -1000 },
-  { opacity: 1, x: 0, scrollTrigger: ".partners" }
+  {
+    opacity: 1,
+    x: 0,
+    scrollTrigger: {
+      trigger: ".partners",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 
 // Classes
@@ -136,7 +187,10 @@ gsap.fromTo(
   {
     opacity: 1,
     y: 0,
-    scrollTrigger: "#classes",
+    scrollTrigger: {
+      trigger: "#classes",
+      toggleActions: "restart none restart none",
+    },
     duration: 0.75,
   }
 );
@@ -150,8 +204,25 @@ gsap.fromTo(
 gsap.fromTo(
   ".contact-details",
   { opacity: 0, y: 100 },
-  { opacity: 1, y: 0, scrollTrigger: ".contact-info" }
+  {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: ".contact-info",
+      toggleActions: "restart none restart none",
+    },
+  }
 );
 
 // footer
-gsap.fromTo("footer", { opacity: 0 }, { opacity: 1, scrollTrigger: "footer" });
+gsap.fromTo(
+  "footer",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "footer",
+      toggleActions: "restart none restart none",
+    },
+  }
+);
